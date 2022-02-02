@@ -24,7 +24,7 @@ class Kernel extends HttpKernel
     ];
 
     /**
-     * The application's - middleware groups.
+     * The application's route middleware groups.
      *
      * @var array
      */
@@ -40,12 +40,10 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-
-         'admin_auth' => [
+        'admin_auth' => [
             \App\Http\Middleware\AdminAuth::class,
         ],
     ];

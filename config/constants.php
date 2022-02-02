@@ -1,5 +1,4 @@
 <?php
 return [
-	
-	'site_name' => 'MY ECOM'
+    'site_name'=>'My ECOM'
 ];
