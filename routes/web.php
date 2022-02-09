@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\BrandController;
 use App\Http\Controllers\Admin\TaxController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Front\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[FrontController::class,'index']);
+
 Route::get('admin',[AdminController::class,'index']);
 Route::post('admin/auth',[AdminController::class,'auth'])->name('admin.auth');
 

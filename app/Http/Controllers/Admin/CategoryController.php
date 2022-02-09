@@ -76,7 +76,6 @@ class CategoryController extends Controller
                     Storage::delete('/public/media/category/'.$arrImage[0]->category_image);
                 }
             }
-
             $image=$request->file('category_image');
             $ext=$image->extension();
             $image_name=time().'.'.$ext;
